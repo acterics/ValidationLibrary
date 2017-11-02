@@ -6,3 +6,5 @@
 /build
 /captures
 .externalNativeBuild
+/validationlib/mavensettings.gradle
+/validationlib/bintraysettings.gradle
