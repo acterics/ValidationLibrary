@@ -53,7 +53,13 @@ public class ValidatorUnitTest {
         String validPhone3 = "+380111111111";
         String validPhone4 = "+3 8 0111111111";
         String validPhone5 = "+3 80 11 1111111";
-        String validPhone6 = "+380(11) 1111111";
+        String validPhone6 = "+3-80-(11) 1111111";
+        String validPhone7 = "+380(11)- 11-11111";
+        String validPhone8 = "+38-0(11) 1111111";
+        String validPhone9 = "+38-0(-1-1) 11-11111";
+        String validPhone10 = "+380-(1-1) 11--1-1111";
+        String validPhone11 = "+38-0-(11) --1111111";
+        String validPhone12 = "+380-(11) 111-1111";
 
         String invalidPhone1 = "";
         String invalidPhone2 = "1";
@@ -70,7 +76,9 @@ public class ValidatorUnitTest {
                 invalidPhone7);
         List<String> validPhones = Arrays.asList(
                 validPhone1, validPhone2, validPhone3,
-                validPhone4, validPhone5, validPhone6);
+                validPhone4, validPhone5, validPhone6,
+                validPhone7, validPhone8, validPhone9,
+                validPhone10, validPhone11, validPhone12);
 
         for (String valid : validPhones) {
             assertTrue(valid, validator.isValidPhoneNumber(valid));

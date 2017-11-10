@@ -13,7 +13,7 @@ ext {
     siteUrl = 'https://github.com/acterics/ValidationLibrary'
     gitUrl = 'https://github.com/acterics/ValidationLibrary'
 
-    libraryVersion = '0.2.0'
+    libraryVersion = '0.2.1'
 
     developerId = 'acterics'
     developerName = 'Oleg Lipskiy'
@@ -32,7 +32,7 @@ android {
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 26
-        versionCode 2
+        versionCode 3
         versionName libraryVersion
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"

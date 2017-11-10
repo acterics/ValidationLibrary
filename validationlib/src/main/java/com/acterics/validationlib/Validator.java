@@ -12,7 +12,7 @@ public class Validator {
     private final String EMAIL_PATTERN = "^[_A-Za-z0-9-+]+(\\.[_A-Za-z0-9-]+)*@"
             + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
 
-    private final String PHONE_NUMBER_PATTERN = "^\\+(?:[0-9()] ?){6,14}[0-9]$";
+    private final String PHONE_NUMBER_PATTERN = "^\\+(?:[0-9()-] ?){6,20}[0-9]$";
 
     private final String PASSWORD_PATTERN = "^\\w{8,}$";
 
