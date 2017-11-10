@@ -5,4 +5,6 @@ package com.acterics.validationlib;
  */
 
 public class ValidationSettings {
+  private int passwordMinimumSize = 8;
+  private int passwordValidationComplexity = 0;
 }

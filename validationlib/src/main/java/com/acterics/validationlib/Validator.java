@@ -13,6 +13,9 @@ public class Validator {
             + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
 
     private final String PHONE_NUMBER_PATTERN = "^\\+(?:[0-9()] ?){6,14}[0-9]$";
+
+    private final String PASSWORD_PATTERN = "^\\w{8,}$";
+
 //    private final String PHONE_NUMBER_PATTERN = "/([0-9\\s\\-]{7,})(?:\\s*(?:#|x\\.?|ext\\.?|extension)\\s*(\\d+))?$/";
 //    private final String PHONE_NUMBER_PATTERN = "^\\+(9[976]\\d|8[987530]\\d|6[987]\\d|5[90]\\d|42\\d|3[875]\\d|\n" +
 //        "2[98654321]\\d|9[8543210]|8[6421]|6[6543210]|5[87654321]|\n" +
@@ -21,6 +24,7 @@ public class Validator {
 
     private final Pattern emailPattern = Pattern.compile(EMAIL_PATTERN);
     private final Pattern phoneNumberPattern = Pattern.compile(PHONE_NUMBER_PATTERN);
+    private final Pattern passwordPattern = Pattern.compile(PASSWORD_PATTERN);
 
 
     public static Validator getInstance() {
@@ -41,6 +45,10 @@ public class Validator {
 
     public boolean isValidPhoneNumber(String phoneNumber) {
         return phoneNumberPattern.matcher(phoneNumber).matches();
+    }
+
+    public boolean isValidPassword(String password) {
+        return passwordPattern.matcher(password).matches();
     }
 
 }

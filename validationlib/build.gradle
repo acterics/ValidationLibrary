@@ -13,7 +13,7 @@ ext {
     siteUrl = 'https://github.com/acterics/ValidationLibrary'
     gitUrl = 'https://github.com/acterics/ValidationLibrary'
 
-    libraryVersion = '0.1.0'
+    libraryVersion = '0.2.0'
 
     developerId = 'acterics'
     developerName = 'Oleg Lipskiy'

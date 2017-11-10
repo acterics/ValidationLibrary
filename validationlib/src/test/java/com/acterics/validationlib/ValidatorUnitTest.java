@@ -79,4 +79,44 @@ public class ValidatorUnitTest {
             assertFalse(invalid, validator.isValidPhoneNumber(invalid));
         }
     }
+
+    @Test
+    public void passwordValidationTest() {
+        String validPassword1 = "12345687";
+        String validPassword2 = "qwertyui";
+        String validPassword3 = "q12we34r";
+        String validPassword4 = "Aq12WsDe3";
+        String validPassword5 = "QWERTYUI";
+        String validPassword6 = "Q1W2E3R4";
+        String validPassword7 = "123456871234568712345687";
+        String validPassword8 = "qazxswedcRFVBGTYHN123456";
+
+        String invalidPassword1 = "";
+        String invalidPassword2 = "1234567";
+        String invalidPassword3 = "qwertyu";
+        String invalidPassword4 = "QWERTYU";
+        String invalidPassword5 = "qwertyu!";
+        String invalidPassword6 = "////////";
+        String invalidPassword7 = "@@@@@@@@";
+        String invalidPassword8 = "qwertyu i";
+        String invalidPassword9 = "        ";
+
+
+
+        List<String> invalidPasswords = Arrays.asList(
+                invalidPassword1, invalidPassword2, invalidPassword3,
+                invalidPassword4, invalidPassword5, invalidPassword6,
+                invalidPassword7, invalidPassword8, invalidPassword9);
+        List<String> validPasswords = Arrays.asList(
+                validPassword1, validPassword2, validPassword3,
+                validPassword4, validPassword5, validPassword6,
+                validPassword7, validPassword8);
+
+        for (String valid : validPasswords) {
+            assertTrue(valid, validator.isValidPassword(valid));
+        }
+        for (String invalid: invalidPasswords) {
+            assertFalse(invalid, validator.isValidPassword(invalid));
+        }
+    }
 }
